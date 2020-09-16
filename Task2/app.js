@@ -1,33 +1,36 @@
 //replaceString function
 const replaceString = (word, search, replaceWith) => {
-    console.log((word).replace(search, replaceWith));
+    return (word).replace(search, replaceWith);
 }
-replaceString('KalAkuata', /a/gi, 'e');
+console.log(replaceString('KalAkuata', /a/gi, 'e'));
 
 //changeCase function
 const changeCase = (sentence, caseWord) => {
     if (caseWord == 'upper') {
-        console.log(sentence.toUpperCase());
+        return sentence.toUpperCase();
     } else if (caseWord == 'lower') {
-        console.log(sentence.toLowerCase());
+        return sentence.toLowerCase();
     }
 }
-changeCase('satunklampa', 'upper');
+console.log(changeCase('satunklampa', 'upper'));
 
 //trimEdges function
 const trimEdges = (sentence) => {
-    console.log(sentence.trim());
+    return sentence.trim();
 }
-trimEdges("   salmond     ");
+console.log(trimEdges("   salmond     "));
 
 //extractString function
 const extractString = (sentence, start, end) => {
-    console.log(sentence.substring(start, end));
+    return sentence.substring(start, end);
 }
-extractString("Adele, great singer", 7, 17);
+console.log(extractString("Adele, great singer", 7, 17));
 
 //getInitials function
 const getInitials = name => {
-    console.log(name.split(' ').map((n) => n[0]).join('').toUpperCase());
+    const wordArray = name.split(' ');
+    const firstName = wordArray[0];
+    const lastName = wordArray[1];
+    return (firstName.charAt(0) + lastName.charAt(0)).toUpperCase();
 }
-getInitials("brendan eich");
+console.log(getInitials("brendan eich"));
